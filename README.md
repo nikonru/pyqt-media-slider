@@ -5,7 +5,7 @@ This is QSlider which supports the smoothly draggable handle, direct handle plac
 PyQt5 >= 5.8
 
 ## Setup
-`python -m pip install pyqt-media-slider`
+`python -m pip install git+https://github.com/nikonru/pyqt-media-slider --upgrade`
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>

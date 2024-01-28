@@ -44,13 +44,13 @@ class MediaSlider(QSlider):
         if e.button() == Qt.LeftButton:
             self.__pressed = True
             e.accept()
-            value = self.__setPositionAndGetValue(e)
+            value = int(self.__setPositionAndGetValue(e))
             self.pressed.emit(value)
 
     def mouseMoveEvent(self, e):
         if self.__pressed:
             e.accept()
-            value = self.__setPositionAndGetValue(e)
+            value = int(self.__setPositionAndGetValue(e))
             self.dragged.emit(value)
         return super().mouseMoveEvent(e)
 
@@ -58,6 +58,6 @@ class MediaSlider(QSlider):
         if e.button() == Qt.LeftButton:
             self.__pressed = False
             e.accept()
-            value = self.__setPositionAndGetValue(e)
+            value = int(self.__setPositionAndGetValue(e))
             self.released.emit(value)
         return super().mouseReleaseEvent(e)

@@ -16,7 +16,7 @@ setup(
     packages=find_packages(),
     package_data={'pyqt_media_slider.style': ['slider.css']},
     description='PyQt media slider',
-    url='https://github.com/yjg30737/pyqt-media-slider.git',
+    url='https://github.com/nikonru/pyqt-media-slider.git',
     long_description_content_type='text/markdown',
     long_description=long_description,
     install_requires=[
