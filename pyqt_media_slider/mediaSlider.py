@@ -37,6 +37,7 @@ class MediaSlider(QSlider):
             value = 0
         elif value >= self.maximum():
             value = self.maximum()
+        value = int(value)
         self.setValue(value)
         return value
 
