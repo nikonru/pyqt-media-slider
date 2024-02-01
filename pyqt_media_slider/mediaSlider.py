@@ -1,8 +1,7 @@
 from PyQt5.QtWidgets import QSlider
 from PyQt5.QtCore import Qt, pyqtSignal
 
-from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
-
+from style import QSlider as QSliderStyle
 
 class MediaSlider(QSlider):
     pressed = pyqtSignal(int)
@@ -16,8 +15,7 @@ class MediaSlider(QSlider):
 
     def __initUi(self):
         self.setOrientation(Qt.Horizontal)
-
-        PyQtResourceHelper.setStyleSheet([self], ['style/slider.css'])
+        self.setStyleSheet(QSliderStyle())
         self.setRange(0, 10000)
 
         self.setMouseTracking(True)

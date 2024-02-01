@@ -14,7 +14,6 @@ setup(
     author_email='yjg30737@gmail.com',
     license='MIT',
     packages=find_packages(),
-    package_data={'pyqt_media_slider.style': ['slider.css']},
     description='PyQt media slider',
     url='https://github.com/nikonru/pyqt-media-slider.git',
     long_description_content_type='text/markdown',
