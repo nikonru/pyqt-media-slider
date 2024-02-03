@@ -30,14 +30,17 @@ class MediaSlider(QSlider):
     dragged = pyqtSignal(int)
     released = pyqtSignal(int)
 
-    def __init__(self):
+    def __init__(self, style=None):
         super().__init__()
         self.__pressed = False
-        self.__initUi()
+        if not style:
+            self.__initUi(qSliderStyle())
+        else:
+            self.__initUi(style)
 
-    def __initUi(self):
+    def __initUi(self, style):
         self.setOrientation(Qt.Horizontal)
-        self.setStyleSheet(qSliderStyle())
+        self.setStyleSheet(style)
         self.setRange(0, 10000)
 
         self.setMouseTracking(True)
